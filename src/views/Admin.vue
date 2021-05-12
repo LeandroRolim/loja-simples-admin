@@ -12,6 +12,13 @@
         <v-list-item-group>
           <v-list-item>
             <v-list-item-icon>
+              <v-icon>mdi-shape</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Categorias</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-icon>
               <v-icon>mdi-tshirt-crew</v-icon>
             </v-list-item-icon>
             <v-list-item-title>Produtos</v-list-item-title>

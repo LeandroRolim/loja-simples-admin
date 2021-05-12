@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Store from "../store";
+// import Store from "../store";
 Vue.use(VueRouter);
 
 const routes = [
@@ -24,9 +24,9 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes,
 });
-router.beforeEach((to, from, next) => {
-  if (to.name !== "Login" && !Store.state.auth.isAuthenticated)
-    next({ name: "Login" });
-  else next();
-});
+// router.beforeEach((to, from, next) => {
+//   if (to.name !== "Login" && !Store.state.auth.isAuthenticated)
+//     next({ name: "Login" });
+//   else next();
+// });
 export default router;
