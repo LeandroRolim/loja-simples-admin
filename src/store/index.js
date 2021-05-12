@@ -5,8 +5,12 @@ import auth from "./auth";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
+  state: {
+    loading: false,
+  },
+  mutations: {
+    setLoading: (state, payload) => (state.loading = payload),
+  },
   actions: {},
   modules: {
     auth,

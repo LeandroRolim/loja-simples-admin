@@ -19,6 +19,7 @@ const store = {
       });
     },
     async login(context, payload) {
+      context.commit("setLoading", true);
       await http.get("sanctum/csrf-cookie").then(() => {
         http
           .post("login", {
@@ -35,6 +36,7 @@ const store = {
           })
           .catch((error) => (this.errors = error.response.data.errors || {}));
       });
+      context.commit("setLoading", false);
     },
     logout(context) {
       http.post("logout").then(({ status }) => {

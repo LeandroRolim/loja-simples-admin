@@ -43,34 +43,26 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
-    <lr-loader :loading="loading" msg="Verificando e-mail e senha"></lr-loader>
   </div>
 </template>
 
 <script>
-import LrLoader from "../../components/LrLoader.vue";
 export default {
   name: "LoginBase",
   data: () => ({
     email: "admin@mail.com",
     password: "123456",
     dialog: false,
-    loading: false,
     obfuscate: true,
     errors: {},
   }),
   methods: {
     async login() {
-      this.loading = true;
       await this.$store.dispatch("login", {
         email: this.email,
         password: this.password,
       });
-      this.loading = false;
     },
-  },
-  components: {
-    LrLoader,
   },
   computed: {
     isAuthenticated() {

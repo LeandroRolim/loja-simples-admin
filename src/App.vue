@@ -35,14 +35,18 @@
         </v-list>
       </v-menu>
     </v-app-bar>
-
     <v-main>
       <router-view />
+      <lr-loader
+        :loading="$store.state.loading"
+        msg="Carregando ..."
+      ></lr-loader>
     </v-main>
   </v-app>
 </template>
 
 <script>
+import LrLoader from "./components/LrLoader";
 export default {
   name: "App",
 
@@ -57,6 +61,9 @@ export default {
   },
   created() {
     this.$store.dispatch("checkUser");
+  },
+  components: {
+    LrLoader,
   },
 };
 </script>
