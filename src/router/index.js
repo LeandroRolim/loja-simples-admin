@@ -14,7 +14,16 @@ const routes = [
     name: "Admin",
     component: () => import("../views/Admin"),
     children: [
-      { path: "", component: () => import("../views/Admin/Dashboard.vue") },
+      {
+        path: "",
+        name: "Dashboard",
+        component: () => import("../views/Admin/Dashboard.vue"),
+      },
+      {
+        path: "categorias",
+        name: "Category.list",
+        component: () => import("../views/Admin/Category/CategoryTable.vue"),
+      },
     ],
   },
 ];
