@@ -13,6 +13,9 @@ const routes = [
     path: "/admin",
     name: "Admin",
     component: () => import("../views/Admin"),
+    children: [
+      { path: "", component: () => import("../views/Admin/Dashboard.vue") },
+    ],
   },
 ];
 
