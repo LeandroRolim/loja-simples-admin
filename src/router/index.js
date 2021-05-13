@@ -28,6 +28,16 @@ const routes = [
         name: "admin.user",
         component: () => import("../views/Admin/User/UserTable.vue"),
       },
+      {
+        path: "/coupons",
+        name: "admin.coupon",
+        component: () => import("../views/Admin/Coupon/CouponTable.vue"),
+      },
+      {
+        path: "/products",
+        name: "admin.product",
+        component: () => import("../views/Admin/Product/ProductTable.vue"),
+      },
     ],
   },
 ];
