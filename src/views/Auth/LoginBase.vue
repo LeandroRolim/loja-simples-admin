@@ -71,7 +71,7 @@ export default {
   },
   watch: {
     isAuthenticated(value) {
-      if (value) this.$router.push({ name: "Admin" });
+      if (value) this.$router.push({ name: "admin.dashboard" });
     },
   },
 };

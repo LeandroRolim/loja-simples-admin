@@ -11,18 +11,22 @@ const routes = [
   },
   {
     path: "/admin",
-    name: "Admin",
     component: () => import("../views/Admin"),
     children: [
       {
-        path: "",
-        name: "Dashboard",
+        path: "/",
+        name: "admin.dashboard",
         component: () => import("../views/Admin/Dashboard.vue"),
       },
       {
-        path: "categorias",
-        name: "Category.list",
+        path: "/categorias",
+        name: "admin.category",
         component: () => import("../views/Admin/Category/CategoryTable.vue"),
+      },
+      {
+        path: "/users",
+        name: "admin.user",
+        component: () => import("../views/Admin/User/UserTable.vue"),
       },
     ],
   },

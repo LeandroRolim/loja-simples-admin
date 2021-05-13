@@ -14,7 +14,9 @@
             <v-list-item-icon>
               <v-icon>mdi-chart-bar</v-icon>
             </v-list-item-icon>
-            <v-list-item-title @click="$router.push({ name: 'Dashboard' })">
+            <v-list-item-title
+              @click="$router.push({ name: 'admin.dashboard' })"
+            >
               Dashboard
             </v-list-item-title>
           </v-list-item>
@@ -23,9 +25,11 @@
             <v-list-item-icon>
               <v-icon>mdi-shape</v-icon>
             </v-list-item-icon>
-            <v-list-item-title @click="$router.push({ name: 'Category.list' })"
-              >Categorias</v-list-item-title
+            <v-list-item-title
+              @click="$router.push({ name: 'admin.category' })"
             >
+              Categorias
+            </v-list-item-title>
           </v-list-item>
 
           <v-list-item>
@@ -46,7 +50,9 @@
             <v-list-item-icon>
               <v-icon>mdi-account-group</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>Usuários</v-list-item-title>
+            <v-list-item-title @click="$router.push({ name: 'admin.user' })">
+              Usuários
+            </v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
