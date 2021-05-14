@@ -24,6 +24,13 @@
             <v-list-item-title> Categorias </v-list-item-title>
           </v-list-item>
 
+          <v-list-item link :to="{ name: 'admin.brand' }">
+            <v-list-item-icon>
+              <v-icon>mdi-tag</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title> Marcas </v-list-item-title>
+          </v-list-item>
+
           <v-list-item link :to="{ name: 'admin.product' }">
             <v-list-item-icon>
               <v-icon>mdi-tshirt-crew</v-icon>
